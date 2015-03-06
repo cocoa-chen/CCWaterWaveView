@@ -23,18 +23,19 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor purpleColor];
     //add view
-    waveView = [[CCWaterWaveView alloc] initWithFrame:CGRectMake(60, 80, 60, 60)];
+    waveView = [[CCWaterWaveView alloc] initWithFrame:CGRectMake(140, 150, 60, 60)];
+    waveView.progress = 0.4;
     [self.view addSubview:waveView];
     
-    [NSTimer scheduledTimerWithTimeInterval:2.f target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];
+//    [NSTimer scheduledTimerWithTimeInterval:2.f target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];
 }
 
 - (void)updateProgress
 {
-    progress += 0.2;
-    if (progress >= 1.f) {
-        progress = 1.f;
-    }
+//    progress += 0.2;
+//    if (progress >= 1.f) {
+//        progress = 1.f;
+//    }
     waveView.progress = progress;
 }
 - (void)didReceiveMemoryWarning {
